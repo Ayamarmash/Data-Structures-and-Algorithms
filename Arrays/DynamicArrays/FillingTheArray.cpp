@@ -1,26 +1,7 @@
-#include <iostream>
-
-using namespace std;
-
-int main() 
+void FillDynamicArray(int *Arr) //pass the array by address 
 {
-    int arrSize;
-    cout << "enter size " << endl;
-    cin >> arrSize;
-    int *Arr;
-    Arr = new int[arrSize];
-    for(int i=0;i<arrSize;i++)
+    for(int i=0; i<sizeof(Arr); i++) // sizeof Takes the Arr as a parameter and return the size of it
     {
-        Arr[i] = (rand() % 10) + 1;
-        cout << Arr[i] << " , ";
-    }    
-    /// User can change the size later on
-    cout << "enter New size " << endl;
-    cin >> arrSize;
-    Arr = new int[arrSize];
-    for(int i=0;i<arrSize;i++)
-    {
-        Arr[i] = (rand() % 10) + 1;
-        cout << Arr[i] << " , ";
+        Arr[i] = (rand() % 10) + 1; // Filling the array with random numbers between (1 , 10)
     }
 }
