@@ -1,3 +1,4 @@
+
 class Queue
 {
     private:
@@ -19,6 +20,10 @@ class Queue
         rear = -1;
         size = x;
         arr = new arr[size];
+        for(int i=0 ;i<size ;i++)
+        {
+            arr[i] = 0;
+        }
     }
 
 };
